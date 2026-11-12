@@ -1,0 +1,76 @@
+import csv
+
+# Creating a fictional student dataset
+students = [
+    {
+        "Student ID": "24/14003",
+        "Department": "Computer Science",
+        "Level": 200,
+        "Attendance Percentage": 85,
+        "Average Examination Score": 78
+    },
+    {
+        "Student ID": "24/13004",
+        "Department": "Software",
+        "Level": 200,
+        "Attendance Percentage": 90,
+        "Average Examination Score": 82
+    },
+    {
+        "Student ID": "24/14577",
+        "Department": "Cyber Security",
+        "Level": 300,
+        "Attendance Percentage": 75,
+        "Average Examination Score": 68
+    },
+    {
+        "Student ID": "24/15689",
+        "Department": "Computer Science",
+        "Level": 300,
+        "Attendance Percentage": 95,
+        "Average Examination Score": 88
+    },
+    {
+        "Student ID": "24/15678",
+        "Department": "Software",
+        "Level": 100,
+        "Attendance Percentage": 80,
+        "Average Examination Score": 74
+    },
+    {
+        "Student ID": "24/12345",
+        "Department": "Cyber Security",
+        "Level": 400,
+        "Attendance Percentage": 92,
+        "Average Examination Score": 91
+    },
+    {
+        "Student ID": "24/14639",
+        "Department": "Computer Science",
+        "Level": 300,
+        "Attendance Percentage": 70,
+        "Average Examination Score": 65
+    },
+    {
+        "Student ID": "24/12345",
+        "Department": "Software",
+        "Level": 200,
+        "Attendance Percentage": 88,
+        "Average Examination Score": 80
+    },
+    {
+        "Student ID": "24/12890",
+        "Department": "Cyber Security",
+        "Level": 400,
+        "Attendance Percentage": 96,
+        "Average Examination Score": 93
+    }
+]
+
+# Save the dataset as a CSV file
+with open("student_dataset.csv", "w", newline="") as file:
+    writer = csv.DictWriter(file, fieldnames=students[0].keys())
+    writer.writeheader()
+    writer.writerows(students)
+
+print("Student dataset created successfully!")
